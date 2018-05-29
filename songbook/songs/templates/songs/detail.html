@@ -1,0 +1,9 @@
+{% extends 'songs/base.html' %}
+{% block body %}
+
+<div style="margin: auto;width: 50%;padding: 10px;">
+  <iframe width="750" height="500" src="https://www.youtube.com/embed/{{ song.link }}?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+{% endblock %}

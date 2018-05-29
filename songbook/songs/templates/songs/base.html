@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Songbook</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'songs/style.css' %}">
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="{% url 'songs:index' %}">
+        <img src="{% static 'songs/images/play.svg' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+        Songbook
+      </a>
+    </nav>
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>
