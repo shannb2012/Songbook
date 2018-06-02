@@ -9,5 +9,6 @@ class Song(models.Model):
 
     def __str__(self):
         return self.title
-
-    
+    #"/songs/%i/" % self.id
+    def get_absolute_url(self):
+        return "/songs/"

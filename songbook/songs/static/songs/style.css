@@ -1,3 +1,10 @@
-.bg-light {
-  background-color: #E1A999;
+body {
+  background-color: #f8f9fa;
+}
+
+h1 {
+  margin-top: 24px;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  color: #E1A999;
 }

@@ -1,0 +1,33 @@
+{% extends 'songs/base.html' %}
+
+{% block body %}
+<div class="d-flex justify-content-center mt-5">
+
+      <div class="card text-white mb-3" style="max-width: 18rem; background-color: #E1A999;">
+        <div class="card-header" style="font-family: 'Lobster', cursive; background-color: #D36D59;">Add Song</div>
+        <div class="card-body">
+          {% if error_message %}
+              <p><strong>{{ error_message }}</strong></p>
+          {% endif %}
+          <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="form-group">
+                <div class="col-sm-auto-2 col-sm-10">
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+</div>
+
+
+
+
+<!--<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save" />
+</form>-->
+{% endblock %}

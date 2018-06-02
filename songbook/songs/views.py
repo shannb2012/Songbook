@@ -2,6 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
+from django.views.generic.edit import CreateView, UpdateView
 
 from .models import Song
 
@@ -16,7 +17,13 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Song
     template_name = 'songs/detail.html'
-    
+
 
     def get_queryset(self):
         return Song.objects.all()
+
+class SongCreate(CreateView):
+    model = Song
+    fields = ['image', 'title', 'artist', 'link']
+
+    
